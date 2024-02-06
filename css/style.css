@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+body {
+    background: url('../img/tictactoebackground.jpg') no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 80vh;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 80px;
+    width: 700px;
+}
+
+#phrase {
+    text-align: center;
+    font-size: 2em;
+}
+
+#phrase p {
+    color: rgb(175, 173, 173);
+}
+
+#recommencer {
+    text-align: center;
+}
+
+#recommencer button {
+    width: 200px;
+}
+
+.carree {
+
+    margin: 5px;
+    background-color: rgba(59, 59, 59, 0.851);
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.croix {
+    color: red;
+}
+
+.rond {
+    color: rgb(29, 134, 219);
+}
+
+.fin {
+    pointer-events: none;
+}
+
+.green {
+    background-color: rgba(13, 124, 13, 0.851);
+}
+
+.clicked {
+    animation: click 1s;
+}
+
+p {
+    padding-top: 15px;
+    text-align: center;
+    color:rgb(175, 173, 173);
+}
+
+@keyframes click {
+    from {
+        background-color: rgba(59, 59, 59, 0.851);
+    }
+    50% {
+        background-color: rgba(165, 29, 29, 0.753);
+    }
+    to {
+        background-color: rgba(59, 59, 59, 0.851);
+    }
+}
