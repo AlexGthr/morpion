@@ -8,18 +8,34 @@
     <title>Document</title>
 </head>
 <body>
-
-    <div id="board"></div>
-
-    <div id="phrase">
-            <p class="phrase">C'est au tour des : X</p>
-    </div>
-
-        <div id="recommencer">
-            <button id="recommencerBtn">Recommencer</button>
+    <div class="wrap">
+        <div class="jeu">
+            <div id="boxJoueurUn">
+                <h1><span id="nomJoueurUn">Joueur 1</span></h1>
+                <p>Symbole : <span id="symboleJoueurUn"> X </span></p>
+                <h2 id="resultatJoueurUn">Votre tour !</h2>
+            </div>
+        
+            <div id="board"></div>
+        
+            <div id="boxJoueurUn">
+                <h1><span id="nomJoueurDeux">Joueur 2</span></h1>
+                <p>Symbole : <span id="symboleJoueurDeux"> O </span></p>
+                <h2 id="resultatJoueurDeux">Votre tour !</h2>
+            </div>
+            
         </div>
-    
+
+        <div id="phrase">
+            <p class="phrase">C'est au tour des : X</p>
+        </div>
+
         <p>Score X : <span id="scoreX">0</span></p>
         <p>Score O : <span id="scoreO">0</span></p>
+        
+        <div id="recommencer">
+            <button id="recommencerBtn">Recommencer</button>
+    </div>
+    </div>
 </body>
 </html>

@@ -88,7 +88,7 @@ function phrases(text) {
     }
     
     else if (countTotal === 9) { // Si le nombre total de coup est joué, alors fin de la partie.
-        text.textContent = "Fin de la partie !"
+        text.textContent = "Fin de la partie ! Match nul !"
     }
     else if (count === 1) { // Sinon si count = 1 alors X
         text.textContent = "C'est au tour des : X"
