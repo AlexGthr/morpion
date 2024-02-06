@@ -6,7 +6,8 @@ const box = document.createElement("div")
 box.classList.add("carree")
 
 // On récupère le texte de base dans le DOM
-let phrase = document.querySelector(".phrase")
+let phraseJoueurUn = document.getElementById("resultatJoueurUn")
+let phraseJoueurDeux = document.getElementById("resultatJoueurDeux")
 
 // On récupère les span du DOM pour la gestions du score
 let scoreX = document.getElementById("scoreX")
@@ -72,9 +73,11 @@ function victoire() { // Gestion de la victoire
 }
 
 // Function qui va gerer le texte en dessous de la partie
-function phrases(text) {
+function phrases(textun, textdeux) {
     if (victoire()) { // Si la function victoire est "true" alors
-        text.textContent = `Joueur ${count === 1 ? 'O' : 'X'} remporte la partie !`;
+        textun.textContent = `Joueur ${count === 1 ? 'O' : 'X'} remporte la partie !`;
+        textdeux.textContent = `Joueur ${count === 1 ? 'O' : 'X'} remporte la partie !`;
+
         board.classList.add("fin"); // Class fin qui, en CSS, desactive le jeu
 
         if(count === 2) {
@@ -88,13 +91,18 @@ function phrases(text) {
     }
     
     else if (countTotal === 9) { // Si le nombre total de coup est joué, alors fin de la partie.
-        text.textContent = "Fin de la partie ! Match nul !"
+        textun.textContent = "Fin de la partie ! Match nul !"
+        textdeux.textContent = "Fin de la partie ! Match nul !"
     }
     else if (count === 1) { // Sinon si count = 1 alors X
-        text.textContent = "C'est au tour des : X"
+        textun.textContent = "Votre tour !"
+        textdeux.textContent = "  "
     }
-    else { // Sinon par defaut ça sera O
-        text.textContent = "C'est au tour des : O"
+    else if (count === 2) { // Sinon par defaut ça sera O
+        textun.textContent = "  "
+        textdeux.textContent = "Votre tour !"
+    } else {
+        text.textContent = "probleme"
     }
 }
 
@@ -133,12 +141,12 @@ for (let i = 1; i <= 9; i++) {
 
     newBox.addEventListener("click", function() {
         tictactoe(newBox); // Au click on call la function tictactoe
-        phrases(phrase); // Et on change la phrase
+        phrases(phraseJoueurUn, phraseJoueurDeux);// Et on change la phrase
     });
 }
 
 // On crée un event ici au click du bouton recommencer pour reset la partie
 recommencerBtn.addEventListener("click", function () {
     partieReset(board);
-    phrases(phrase);
+    phrases(phraseJoueurUn, phraseJoueurDeux);
 });
