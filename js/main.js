@@ -197,6 +197,7 @@ submit.addEventListener("click", (event) => {
     if (inputJoueurUn.value !== inputJoueurDeux.value && inputJoueurUn.value !== "" && inputJoueurDeux.value !== "") {
         nomJoueurUn.textContent = inputJoueurUn.value
         nomJoueurDeux.textContent = inputJoueurDeux.value
+        boxJoueurUn.classList.add("tour")
         popUp.style.display = "none";
     } else if (inputJoueurUn === inputJoueurDeux) {
         popUpform.style.backgroundColor = "red";
