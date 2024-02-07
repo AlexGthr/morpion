@@ -19,7 +19,7 @@
         
             <div id="board"></div>
         
-            <div id="boxJoueurUn">
+            <div id="boxJoueurDeux">
                 <h1><span id="nomJoueurDeux">Joueur 2</span></h1>
                 <p>Symbole : <span id="symboleJoueurDeux"> O </span></p>
                 <p>Votre score : <span id="scoreO"> 0 </span></p>
@@ -27,14 +27,26 @@
             </div>
             
         </div>
-
-        <div id="phrase">
-            <p class="phrase">C'est au tour des : X</p>
-        </div>
         
         <div id="recommencer">
+            <button id="changerNom">Changer les noms</button>
             <button id="recommencerBtn">Recommencer</button>
+            <button id="resetScore">Reset score</button>
     </div>
+    </div>
+
+    <div class="popupConfigJeu">
+        <div class="pop">
+            <form novalidate>
+                <label for="nomJoueurUn">Nom du joueur 1 :</label>
+                <input type="text" id="inputJoueurUn" name="nomJoueurUn" placeholder="Votre nom">
+                <br><br>
+                <label for="nomJoueurDeux">Nom du joueur 2 :</label>
+                <input type="text" id="inputJoueurDeux" name="nomJoueurDeux" placeholder="Votre nom">
+                <br><br>
+                <button id="submitNomJoueur">Commencer le jeu</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
