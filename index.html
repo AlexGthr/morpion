@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jeu du Morpion">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="wrap">
+
+        
         <div class="jeu">
             <div id="boxJoueurUn">
                 <h1><span id="nomJoueurUn">Joueur 1</span></h1>
@@ -32,16 +35,18 @@
             <button id="changerNom">Changer les noms</button>
             <button id="recommencerBtn">Recommencer</button>
             <button id="resetScore">Reset score</button>
+        </div>
+        
     </div>
-    </div>
-
+    
+    
     <div class="popupConfigJeu">
         <div class="pop">
             <form novalidate>
-                <label for="nomJoueurUn">Nom du joueur 1 :</label>
+                <label for="nomJoueurUn">Nom du joueur 1 (X) :</label>
                 <input type="text" id="inputJoueurUn" name="nomJoueurUn" placeholder="Votre nom">
                 <br><br>
-                <label for="nomJoueurDeux">Nom du joueur 2 :</label>
+                <label for="nomJoueurDeux">Nom du joueur 2 (O):</label>
                 <input type="text" id="inputJoueurDeux" name="nomJoueurDeux" placeholder="Votre nom">
                 <br><br>
                 <button id="submitNomJoueur">Commencer le jeu</button>

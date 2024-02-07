@@ -48,7 +48,7 @@
 .carree {
 
     margin: 5px;
-    background-color: rgba(59, 59, 59, 0.851);
+    background-color: #ffffffcc;
     height: 200px;
     width: 200px;
     display: flex;
@@ -61,10 +61,12 @@
 
 .croix {
     color: red;
+    font-size: 4em;
 }
 
 .rond {
     color: rgb(29, 134, 219);
+    font-size: 4em;
 }
 
 .fin {
